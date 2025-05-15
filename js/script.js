@@ -76,3 +76,25 @@ document.querySelector('#reset').addEventListener('click', () => {
   index = 0
   showInfos(index)
 })
+
+// Fonction de recherche
+
+const form = document.querySelector('form')
+const search = document.querySelector('#search')
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const valeurRecherche = search.value
+  let i = 0
+  utilisateurs.forEach((utilisateur) => {
+    if(utilisateur.nom === valeurRecherche) {
+      showInfos(i)
+      return
+    }
+    i++
+  })
+  if(i === 4){
+    window.alert('Utilisateur non trouvé !')
+  }
+  search.value = ""
+})
