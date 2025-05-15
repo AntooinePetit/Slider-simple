@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carte étudiant</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="light">
+    <!-- Fonctionnalités à implémenter :
+
+1 -Affichage d’un utilisateur
+
+À l’ouverture de la page, un utilisateur du tableau est affiché.
+
+Ses informations doivent apparaître dans une carte contenant :
+
+Son avatar
+
+Son nom
+
+Son email
+
+Son métier
+
+
+2 - Deux boutons doivent permettre de naviguer entre les utilisateurs :
+
+"Précédent"
+
+"Suivant"
+
+Le bouton "Suivant" affiche l’utilisateur suivant dans le tableau.
+
+Le bouton "Précédent" affiche l’utilisateur précédent.
+
+Le défilement doit être circulaire (quand on dépasse la fin, on revient au début).
+
+3- Recherche
+
+Un champ de texte permet de rechercher un utilisateur par son nom.
+
+Le résultat affiché correspond au premier utilisateur dont le nom contient le mot-clé (insensible à la casse).
+
+Si aucun résultat n’est trouvé, un message "Utilisateur non trouvé" s’affiche.
+-->
+    <header>
+      <form action="#">
+        <label for="search">Rechercher un utilisateur</label>
+        <input type="search" name="search" id="search" />
+        <input type="submit" value="Rechercher" />
+      </form>
+    </header>
+
+    <main>
+      <section>
+        <button id="previous">◀</button>
+        <div id="card">
+          <div>
+            <img src="img/user1.jpg" alt="Avatar de l'utilisateur" />
+            <h1>Nom test</h1>
+          </div>
+          <a href="mailto:test@mail.com" id="mail">Mail de test</a>
+          <p>Métier test</p>
+        </div>
+        <button id="next">▶</button>
+      </section>
+    </main>
+
+    <footer>
+      <button id="reset">Réinitialiser</button>
+      <button id="switch-mode">Mode sombre</button>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
